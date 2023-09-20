@@ -8,18 +8,30 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <title>Gym Hero Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
     </head>
     <body>
-        <!--<h1 style="font-family:Arial"  align="center">Gym Hero</h1>-->
-        <!--<center><img src="img/Gym Hero.png" width="110" height="110" alt></center>-->
-        <h1 ><img src="img/Gym Hero.png" width="110" height="110" alt>&nbsp; Gym Hero</h1>
-        <br>
-        <br>
-        <!--<h1 style="font-family:Arial" align="center">Welcome to Gym Hero!</h1>-->
-        <h1 >Get Started Today!</h1>
-        <br>
-        <br> 
-        <button type="submit" >Login</button> <button type="submit" >Register</button>
+        <div class="center-content">
+          <h1 >
+              <img src="img/Gym Hero.png" width="220" height="220" alt>&nbsp; Gym Hero
+          </h1>
+          <br>
+          <h1 >Login</h1>
+          <br>
+          <div class="input-container">
+            <label for="username" class="label">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+          </div>
+          <div class="input-container">
+            <label for="password" class="label">Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+          </div>
+          <br>
+          <div class="button-container">
+            <button type="submit" class="login-button">Login</button> 
+            <button type="submit" class="register-button">Register</button>
+          </div>
+        </div>
         
     </body>
 </html>

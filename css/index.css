@@ -1,0 +1,74 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 13 Sep 2023, 1:38:10 pm
+    Author     : Yeoh Hong Ming
+*/
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+}
+
+h1 img {
+    vertical-align: middle; 
+    margin-right: 10px; 
+}
+
+.button-container {
+    display: flex; 
+    gap: 10px; 
+    align-items: center; 
+}
+
+button.login-button {
+    padding: 10px 20px; 
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none; 
+    cursor: pointer; 
+    margin-right: 10px;
+    
+}
+
+button.register-button {
+    padding: 10px 20px; 
+    font-size: 16px;
+    background-color: #28a745;
+    color: #fff;
+    border: none; 
+    cursor: pointer; 
+    margin-right: 10px;
+}
+
+.label {
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    width: 120px; /* Adjust the width as needed */
+    text-align: right; /* Right-align the labels */
+    margin-right: 10px; /* Add some spacing between the label and input */
+    vertical-align: middle; /* Vertically align with the input */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Add spacing between input pairs */
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 5px;
+    font-size: 16px;
+    width: 200px; /* Adjust the width as needed */
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}

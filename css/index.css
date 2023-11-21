@@ -6,9 +6,32 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     Created on : 13 Sep 2023, 1:38:10 pm
     Author     : Yeoh Hong Ming
 */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    filter: brightness(70%)
+}
+
+.content-container {
+    position: relative;
+    z-index: 1; 
+}
+
 h1 {
     font-family: Arial, sans-serif;
-    font-size: 50px;
+    font-size: 40px;
+    color: #fff
 }
 
 h1 img {
@@ -22,25 +45,32 @@ h1 img {
     align-items: center; 
 }
 
-button.login-button {
-    padding: 10px 20px; 
-    font-size: 16px;
-    background-color: #007bff;
+input#btn,
+button.register-button {
+    padding: 8px 24px; /* Adjust padding for a more prominent button */
+    font-size: 18px; /* Increase font size for better visibility */
     color: #fff;
-    border: none; 
-    cursor: pointer; 
-    margin-right: 10px;
-    
+    border: none;
+    border-radius: 5px; /* Add rounded corners to the button */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 45px;
+}
+
+input#btn {
+    background-color: #4CAF50; /* Green color for login button */
+}
+
+input#btn:hover {
+    background-color: #45a049; /* Darker green color on hover */
 }
 
 button.register-button {
-    padding: 10px 20px; 
-    font-size: 16px;
-    background-color: #28a745;
-    color: #fff;
-    border: none; 
-    cursor: pointer; 
-    margin-right: 10px;
+    background-color: #28a745; /* Green color for register button */
+}
+
+button.register-button:hover {
+    background-color: #218838; /* Darker green color on hover */
 }
 
 .label {
@@ -50,6 +80,7 @@ button.register-button {
     text-align: right; /* Right-align the labels */
     margin-right: 10px; /* Add some spacing between the label and input */
     vertical-align: middle; /* Vertically align with the input */
+    color: #fff
 }
 
 .input-container {
@@ -72,3 +103,6 @@ input[type="password"] {
     justify-content: center;
     height: 100vh; 
 }
+
+
+

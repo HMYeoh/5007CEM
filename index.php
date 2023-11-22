@@ -35,10 +35,11 @@
                     <input type="password" id="pass" name="pass"><br><br>
                 </div>
                 <br>
+                <p>If you have not register. <a href="Register.php">Register Now</a></p>
                 <div class="button-container"> 
                     <input type="submit" id="btn" value="Login" name="submit"/>
-                    <button type="submit" class="register-button">Register</button>
                 </div>
+                
               </form>
           </div>
                 

@@ -6,6 +6,23 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     Created on : 13 Sep 2023, 1:38:10 pm
     Author     : Yeoh Hong Ming
 */
+a {
+    color: #ffd700; /* Set the desired color for the anchor text (e.g., gold/yellow) */
+    text-decoration: none; /* Remove underline from anchor text */
+}
+
+a:hover {
+    color: #ff9900; /* Set the desired color for the anchor text on hover (e.g., darker gold/yellow) */
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #fff; /* Set the text color */
+    margin-top: 10px; /* Add margin at the top for spacing */
+    margin-left: 32px;
+}
+
 .video-container {
     position: fixed;
     top: 0;
@@ -43,6 +60,7 @@ h1 img {
     display: flex; 
     gap: 10px; 
     align-items: center; 
+    margin-left: 75px;
 }
 
 input#btn,

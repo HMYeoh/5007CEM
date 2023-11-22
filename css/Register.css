@@ -1,0 +1,147 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 16px; 
+    color: #fff;
+    margin-top: 10px; 
+    margin-right: 0px;
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    filter: brightness(70%)
+}
+
+.content-container {
+    position: relative;
+    z-index: 1; 
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+    color: #fff
+}
+
+h1 img {
+    vertical-align: middle; 
+    margin-right: 10px; 
+}
+
+.button-container {
+    display: flex; 
+    gap: 10px; 
+    align-items: center; 
+    margin-left: 100px;
+}
+
+input#btn,
+button.register-button {
+    padding: 8px 24px;
+    font-size: 18px; 
+    color: #fff;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 45px;
+}
+
+input#btn {
+    background-color: #4CAF50; 
+}
+
+input#btn:hover {
+    background-color: #45a049; 
+}
+
+button.register-button {
+    background-color: #28a745; 
+}
+
+button.register-button:hover {
+    background-color: #218838; 
+}
+
+.label {
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    width: 120px;
+    text-align: right; 
+    margin-right: 10px; 
+    vertical-align: middle;
+    color: #000;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px; 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 5px;
+    font-size: 16px;
+    width: 200px; 
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+
+#form {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+#registerBtn {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#registerBtn:hover {
+    background-color: #2980b9;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+

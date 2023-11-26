@@ -1,0 +1,225 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.logout-container {
+    float: right;
+}
+
+.topnav .logout-container a {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background-color: #555;
+    color: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .logout-container a:hover {
+    background-color: green;
+}
+
+/* Center Content */
+.center-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.center-container h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.center-container img {
+    margin-right: 10px;
+}
+
+.center-container h1 {
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+}
+
+.center-container h1 img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.center-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #3498db;
+    padding: 20px;
+    color: white;
+}
+
+.workout-day {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    height: 400px; 
+    width: 300px; 
+}
+
+.workout-day img {
+    width: 100%; 
+    height: 70%; 
+    object-fit: cover; 
+    margin-bottom: 10px; 
+}
+
+.workout-details {
+    flex-grow: 1;
+    text-align: center; 
+}
+
+.workout-details h2 {
+    font-size: 24px;
+}
+
+.workout-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.workout-details li {
+    margin-bottom: 5px;
+}
+
+/* Fetch Data */
+.fetched-workout {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    background-color: #333; 
+    padding: 20px;
+    color: white;
+    margin-top: 20px; 
+}
+
+.fetched-workout h1 {
+    font-size: 32px; 
+    margin-bottom: 20px; 
+}
+
+.fetched-workout .fetched-data {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.fetched-workout .workout-day {
+    background-color: #3498db;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    height: auto;
+    max-width: 300px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; 
+}
+
+.fetched-workout .workout-details {
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 10px; 
+}
+
+.fetched-workout .workout-details h2 {
+    font-size: 24px;
+    text-align: center; 
+}
+
+.fetched-workout .workout-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+}
+
+.fetched-workout .workout-details li {
+    margin-bottom: 5px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; 
+}
+
+.footer-column {
+    flex: 1; 
+    margin-right: 20px; 
+}
+
+.footer-information {
+    margin-top: 100px; 
+}
+
+.footer-content .footer-information p {
+    font-size: 18px;
+    text-align: left;
+}
+
+.footer-content img {
+    max-width: 200px;
+    max-height: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-logo-img {
+    max-width: 200px;
+    height: auto;
+}

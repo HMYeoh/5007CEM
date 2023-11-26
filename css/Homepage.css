@@ -1,11 +1,4 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
-*/
-/* 
-    Created on : 13 Sep 2023, 3:47:58 pm
-    Author     : Yeoh Hong Ming
-*/
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -39,7 +32,7 @@ body {
   float: right;
 }
 
-.topnav .logout-container button {
+.topnav .logout-container a {
   float: right;
   padding: 6px 10px;
   margin-top: 8px;
@@ -51,10 +44,11 @@ body {
   cursor: pointer;
 }
 
-.topnav .logout-container button:hover {
+.topnav .logout-container a:hover {
   background-color: green;
 }
 
+/* Center Content */
 .center-container {
     text-align: center;
     padding: 20px; 
@@ -94,9 +88,9 @@ body {
 /* Slideshow container */
 .slideshow-container {
   position: relative;
-  margin: auto; /* You can remove this line */
+  margin: auto; 
   overflow: hidden;
-  max-width: 100%; /* Set max-width to 100% */
+  max-width: 100%; 
 }
 
 /* Individual slides */
@@ -106,8 +100,8 @@ body {
 }
 
 .mySlides img {
-  width: 100%; /* Ensure the image takes up the full width of the container */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; 
+  height: auto; 
   filter: brightness(70%);
 }
 
@@ -124,7 +118,7 @@ body {
 }
 
 .text h1 {
-    font-size: 70px; /* Adjust the font size as needed */
+    font-size: 70px; 
 }
 
 /* The dots/bullets/indicators */
@@ -151,27 +145,27 @@ body {
 
 /* Section */
 .section {
-    background-color: #3498db; /* Change the background color */
-    color: #fff; /* Change the text color */
-    padding: 50px 20px; /* Adjust padding as needed */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Align items horizontally in the center */
+    background-color: #3498db; 
+    color: #fff; 
+    padding: 50px 20px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
     text-align: center;
 }
 
 .section img {
-    max-width: 35%; /* Make the image responsive within its container */
+    max-width: 35%; 
     height: auto;
-    border-radius: 180px; /* Add border-radius for rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-    margin-bottom: 20px; /* Adjust margin at the bottom of the image */
+    border-radius: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px; 
 }
 
 .section h1 {
     font-size: 18px;
     line-height: 1.6;
-    text-align: center; /* Align the text to the center */
+    text-align: center;
 }
 
 
@@ -184,21 +178,31 @@ body {
 
 .footer-content {
     display: flex;
-    justify-content: space-between; /* Align content to the space between the flex container */
-    align-items: center;
+    justify-content: center; 
+    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    flex-wrap: wrap; 
 }
 
-.footer-content p {
+.footer-column {
+    flex: 1; 
+    margin-right: 20px; 
+}
+
+.footer-information {
+    margin-top: 100px; 
+}
+
+.footer-content .footer-information p {
     font-size: 18px;
-    text-align: center;
+    text-align: left;
 }
 
 .footer-content img {
     max-width: 200px;
-    max-height: 200px; /* Adjust the max-height as needed */
+    max-height: 200px;
     height: auto;
     margin-bottom: 10px;
 }
@@ -208,16 +212,52 @@ body {
     height: auto;
 }
 
-.footer-content .copyright,
-.footer-content .contact {
-    text-align: right; /* Align the text to the right */
-}
 @keyframes fade {
   from {
     opacity: .4;
   }
   to {
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  /* Center Content */
+  .center-container h1 {
+      font-size: 24px;
+  }
+
+  .center-container h1 img {
+      margin-right: 5px;
+  }
+
+  /* Slideshow container */
+  .mySlides img {
+      height: auto;
+      width: 100%;
+  }
+
+  /* Caption text */
+  .text h1 {
+      font-size: 20px;
+  }
+
+  /* Section */
+  .section img {
+      max-width: 500px; 
+  }
+
+  .section h1 {
+      font-size: 16px;
+  }
+
+  /* Footer */
+  .footer-content p {
+      font-size: 7px;
+  }
+
+  .footer-content img {
+      max-width: 150px; 
   }
 }
 

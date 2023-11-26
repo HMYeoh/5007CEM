@@ -1,11 +1,4 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
-*/
-/* 
-    Created on : 20 Sep 2023, 12:06:33 am
-    Author     : Yeoh Hong Ming
-*/
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -39,7 +32,7 @@ body {
   float: right;
 }
 
-.topnav .logout-container button {
+.topnav .logout-container a {
   float: right;
   padding: 6px 10px;
   margin-top: 8px;
@@ -51,7 +44,7 @@ body {
   cursor: pointer;
 }
 
-.topnav .logout-container button:hover {
+.topnav .logout-container a:hover {
   background-color: green;
 }
 
@@ -79,5 +72,116 @@ body {
 .center-container h1 img {
     vertical-align: middle;
     margin-right: 10px;
+}
+
+.instructor {
+    background-color: #3498db;
+    color: white;
+    padding: 20px 20px;
+    display: flex; 
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    height: 320px;
+    width: 500px;
+}
+
+.introduction {
+    max-width: 600px; 
+    margin-left: 20px; 
+    text-align: justify;
+    padding: 50px;
+    word-spacing: 2px;
+}
+
+.introduction p {
+    font-size: 16px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+.payment {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.choose-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+.choose-button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.introduction h4 {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; 
+}
+
+.footer-column {
+    flex: 1; 
+    margin-right: 20px; 
+}
+
+.footer-information {
+    margin-top: 100px; 
+}
+
+.footer-content .footer-information p {
+    font-size: 18px;
+    text-align: left;
+}
+
+.footer-content img {
+    max-width: 200px;
+    max-height: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-logo-img {
+    max-width: 200px;
+    height: auto;
 }
 

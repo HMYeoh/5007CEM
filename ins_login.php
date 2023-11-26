@@ -1,19 +1,19 @@
 <?php
     include("connection.php");
     if(isset($_POST['submit'])){
-        $username = $_POST['user'];
-        $password = $_POST['pass'];
+        $ins_name = $_POST['ins_name'];
+        $ins_password = $_POST['ins_pass'];
 
-        $sql = "select * from login where username = '$username' and password = '$password'";
+        $sql = "select * from instructor_login where ins_name = '$ins_name' and ins_password = '$ins_password'";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
         $count = mysqli_num_rows($result);
         if($count==1){
-            header("Location:Admin Homepage.php");
+            header("Location:InstructorHomepage.php");
         }
         else{
             echo '<script>
-                window.location.href = "Admin Login.php";
+                window.location.href = "Instructor Login.php";
                 alert("Login failed. Invalid username or password")
                 </script>';
         }

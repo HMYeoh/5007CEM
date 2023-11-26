@@ -31,7 +31,7 @@ body {
     float: right;
 }
 
-.topnav .logout-container button {
+.topnav .logout-container a {
     float: right;
     padding: 6px 10px;
     margin-top: 8px;
@@ -43,10 +43,11 @@ body {
     cursor: pointer;
 }
 
-.topnav .logout-container button:hover {
+.topnav .logout-container a:hover {
     background-color: green;
 }
 
+/* Center Content */
 .center-container {
     text-align: center;
     padding: 20px;
@@ -85,26 +86,26 @@ body {
 
 .workout-day {
     display: flex;
-    flex-direction: column; /* Display children elements in a column */
-    align-items: center; /* Center children elements horizontally */
+    flex-direction: column; 
+    align-items: center; 
     margin: 20px;
     padding: 10px;
     border: 2px solid #000;
     border-radius: 5px;
-    height: 400px; /* Set a fixed height for workout-day */
-    width: 300px; /* Set a fixed width for workout-day */
+    height: 400px; 
+    width: 300px; 
 }
 
 .workout-day img {
-    width: 100%; /* Make the image fill the container */
-    height: 70%; /* Set the height of the image (adjust as needed) */
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-    margin-bottom: 10px; /* Add some space between the image and workout details */
+    width: 100%; 
+    height: 70%; 
+    object-fit: cover; 
+    margin-bottom: 10px; 
 }
 
 .workout-details {
     flex-grow: 1;
-    text-align: center; /* Center text in workout-details */
+    text-align: center; 
 }
 
 .workout-details h2 {
@@ -120,6 +121,66 @@ body {
     margin-bottom: 5px;
 }
 
+/* Fetch Data */
+.fetched-workout {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    background-color: #333; 
+    padding: 20px;
+    color: white;
+    margin-top: 20px; 
+}
+
+.fetched-workout h1 {
+    font-size: 32px; 
+    margin-bottom: 20px; 
+}
+
+.fetched-workout .fetched-data {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.fetched-workout .workout-day {
+    background-color: #3498db;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    height: auto;
+    max-width: 300px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; 
+}
+
+.fetched-workout .workout-details {
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 10px; 
+}
+
+.fetched-workout .workout-details h2 {
+    font-size: 24px;
+    text-align: center; 
+}
+
+.fetched-workout .workout-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+}
+
+.fetched-workout .workout-details li {
+    margin-bottom: 5px;
+}
+
 /* Footer */
 .footer {
     background-color: #333;
@@ -129,21 +190,31 @@ body {
 
 .footer-content {
     display: flex;
-    justify-content: space-between; /* Align content to the space between the flex container */
-    align-items: center;
+    justify-content: center; 
+    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    flex-wrap: wrap; 
 }
 
-.footer-content p {
+.footer-column {
+    flex: 1; 
+    margin-right: 20px; 
+}
+
+.footer-information {
+    margin-top: 100px; 
+}
+
+.footer-content .footer-information p {
     font-size: 18px;
-    text-align: center;
+    text-align: left;
 }
 
 .footer-content img {
     max-width: 200px;
-    max-height: 200px; /* Adjust the max-height as needed */
+    max-height: 200px;
     height: auto;
     margin-bottom: 10px;
 }
@@ -151,9 +222,4 @@ body {
 .footer-logo-img {
     max-width: 200px;
     height: auto;
-}
-
-.footer-content .copyright,
-.footer-content .contact {
-    text-align: right; /* Align the text to the right */
 }

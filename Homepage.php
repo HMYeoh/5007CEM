@@ -1,6 +1,13 @@
 <?php
-// Start the PHP session if needed
-// session_start();
+require 'confiq.php';
+if(!empty($_SESSION["id"])){
+    $id = $_SESSION["id"];
+    $result = mysqli_query($conn, "SELECT * FROM user WHERE id = $id");
+    $row = mysqli_fetch_assoc($result);
+}
+else{
+    header("Location: index.php");
+}
 ?>
 
 <head>
@@ -8,6 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/Homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
 </head>
 <body>
 
@@ -16,9 +24,10 @@
         <a class="active" href="Homepage.php">Homepage</a>
         <a href="Workout Schedule.php">Workout Schedule</a>
         <a href="Movements.php">Movements</a>
-        <a href="Instructors.php">Instructors</a>
+        <a href="Instructors.php">Instructor</a>
+        <a href="Videos.php">Routine</a>
         <div class="logout-container">
-            <button type="submit">Logout</button>
+            <a href="logout.php">Logout</a>
         </div><!-- End of logout-container -->
     </div><!-- End of top-navigation -->
 <!-- </div> End of content-container -->
@@ -27,7 +36,7 @@
         <h1>
             <a href="Homepage.php" >
                 <img src="img/Gym Hero.png" width="220" height="220" alt>
-            </a>&nbsp; Welcome to Gym Hero
+            </a>&nbsp; Welcome <?php echo $row["name"]; ?>
         </h1>
     </div>
 
@@ -73,11 +82,26 @@
 
     <div class="footer">
         <div class="footer-content">
-            <p>
-                <img src="img/Gym Hero.png" alt class="footer-logo-img">
-            </p>
-            <p>&copy; 2023 Gym Hero. All rights reserved.</p>
-            <p>Contact us: GymHero@gmail.com</p>
+            <div class="footer-column">
+                <p>
+                    <img src="img/Gym Hero.png" alt class="footer-logo-img">
+                </p>
+            </div>
+            <br>
+
+            <div class="footer-column">
+                <div class="footer-information">
+                    <p>&copy; 2023 Gym Hero. All rights reserved.</p>
+                    <p>Contact us: GymHero@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <div class="footer-information">
+                    <p>Instructor Contact: Larry@gmail.com</p>
+                    <p>Instructor Number: 012-9876543</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>

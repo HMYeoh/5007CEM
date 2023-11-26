@@ -1,25 +1,18 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
-*/
-/* 
-    Created on : 13 Sep 2023, 1:38:10 pm
-    Author     : Yeoh Hong Ming
-*/
+
 a {
-    color: #ffd700; /* Set the desired color for the anchor text (e.g., gold/yellow) */
-    text-decoration: none; /* Remove underline from anchor text */
+    color: #ffd700; 
+    text-decoration: none; 
 }
 
 a:hover {
-    color: #ff9900; /* Set the desired color for the anchor text on hover (e.g., darker gold/yellow) */
+    color: #ff9900; 
 }
 
 p {
     font-family: Arial, sans-serif;
-    font-size: 16px; /* Adjust the font size as needed */
-    color: #fff; /* Set the text color */
-    margin-top: 10px; /* Add margin at the top for spacing */
+    font-size: 16px; 
+    color: #fff; 
+    margin-top: 10px; 
     margin-left: 32px;
 }
 
@@ -45,6 +38,10 @@ p {
     z-index: 1; 
 }
 
+.center-content {
+    margin-left: 22px;
+}
+
 h1 {
     font-family: Arial, sans-serif;
     font-size: 40px;
@@ -65,53 +62,54 @@ h1 img {
 
 input#btn,
 button.register-button {
-    padding: 8px 24px; /* Adjust padding for a more prominent button */
-    font-size: 18px; /* Increase font size for better visibility */
+    padding: 8px 24px; 
+    font-size: 18px; 
     color: #fff;
     border: none;
-    border-radius: 5px; /* Add rounded corners to the button */
+    border-radius: 5px; 
     cursor: pointer;
     transition: background-color 0.3s;
     margin-left: 45px;
 }
 
 input#btn {
-    background-color: #4CAF50; /* Green color for login button */
+    background-color: #4CAF50; 
 }
 
 input#btn:hover {
-    background-color: #45a049; /* Darker green color on hover */
+    background-color: #45a049; 
 }
 
 button.register-button {
-    background-color: #28a745; /* Green color for register button */
+    background-color: #28a745; 
 }
 
 button.register-button:hover {
-    background-color: #218838; /* Darker green color on hover */
+    background-color: #218838; 
 }
 
 .label {
     font-family: Arial, sans-serif;
     display: inline-block;
-    width: 120px; /* Adjust the width as needed */
-    text-align: right; /* Right-align the labels */
-    margin-right: 10px; /* Add some spacing between the label and input */
-    vertical-align: middle; /* Vertically align with the input */
+    width: 120px; 
+    text-align: right; 
+    margin-right: 10px; 
+    vertical-align: middle; 
     color: #fff
 }
 
 .input-container {
     display: flex;
     align-items: center;
-    margin-bottom: 10px; /* Add spacing between input pairs */
+    margin-bottom: 10px; 
+    margin-right: 50px;
 }
 
 input[type="text"],
 input[type="password"] {
     padding: 5px;
     font-size: 16px;
-    width: 200px; /* Adjust the width as needed */
+    width: 200px; 
 }
 
 .center-content {
@@ -122,5 +120,19 @@ input[type="password"] {
     height: 100vh; 
 }
 
+.login-button {
+    background-color: #4CAF50; 
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 125px;
+}
 
+.login-button:hover {
+    background-color: #45a049; 
+}
 

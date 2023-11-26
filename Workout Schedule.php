@@ -1,6 +1,16 @@
 <?php
-// Start the PHP session if needed
-// session_start();
+require 'confiq.php';
+if(!empty($_SESSION["id"])){
+    $id = $_SESSION["id"];
+    $result = mysqli_query($conn, "SELECT * FROM user WHERE id = $id");
+    $row = mysqli_fetch_assoc($result);
+
+    $username = $row['username'];
+    $workoutResult = mysqli_query($conn, "SELECT * FROM instruction WHERE username = '$username'");
+}
+else{
+    header("Location: index.php");
+}
 ?>
 
 <head>
@@ -12,11 +22,12 @@
 <body>
     <div class="topnav">
         <a href="Homepage.php">Homepage</a>
-        <a class="active" href="WorkoutSchedule.php">Workout Schedule</a>
+        <a class="active" href="Workout Schedule.php">Workout Schedule</a>
         <a href="Movements.php">Movements</a>
-        <a href="Instructors.php">Instructors</a>
+        <a href="Instructors.php">Instructor</a>
+        <a href="Videos.php">Routine</a>
         <div class="logout-container">
-            <button type="submit">Logout</button>
+            <a href="logout.php">Logout</a>
         </div><!-- End of logout-container -->
     </div><!-- End of top-navigation -->
     
@@ -27,8 +38,31 @@
             </a>&nbsp; Workout Schedule
         </h1>
     </div>
+
+    <div class="fetched-workout">
+        <h1>Workout Session</h1>
+        <div class="fetched-data">
+            <?php
+            while ($workoutRow = mysqli_fetch_assoc($workoutResult)) {
+                echo "
+                <div class='workout-day'>
+                    <div class='workout-details'>
+                        <h2>{$workoutRow['workout_name']}</h2>
+                        <ul>
+                            <li>Description: {$workoutRow['workout_description']}</li><br>
+                            <li>Sets: {$workoutRow['workout_sets']}</li><br>
+                            <li>Minutes: {$workoutRow['workout_minutes']}</li>
+                        </ul>
+                    </div>
+                </div>
+                ";
+            }
+            ?>
+        </div>
+    </div>
     
     <div class="center-content">
+        <h1>This Year Best Workout Schedule</h1>
         <div class="workout-day">
             <img src="img/MondayWorkout.jpg" alt="Monday Workout">
             <div class="workout-details">
@@ -106,15 +140,30 @@
         </div>
 
     </div>
+
     
     <div class="footer">
         <div class="footer-content">
-            <p>
-                <img src="img/Gym Hero.png" alt class="footer-logo-img">
-            </p>
-            <p>&copy; 2023 Gym Hero. All rights reserved.</p>
-            <p>Contact us: GymHero@gmail.com</p>
+            <div class="footer-column">
+                <p>
+                    <img src="img/Gym Hero.png" alt class="footer-logo-img">
+                </p>
+            </div>
+            <br>
+
+            <div class="footer-column">
+                <div class="footer-information">
+                    <p>&copy; 2023 Gym Hero. All rights reserved.</p>
+                    <p>Contact us: GymHero@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <div class="footer-information">
+                    <p>Instructor Contact: Larry@gmail.com</p>
+                    <p>Instructor Number: 012-9876543</p>
+                </div>
+            </div>
         </div>
     </div>
-</body>
 

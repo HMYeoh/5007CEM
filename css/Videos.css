@@ -48,6 +48,18 @@ body {
   background-color: green;
 }
 
+.navbar-nav .nav-item.logout-link a.nav-link {
+    color: red;
+}
+
+.navbar-nav {
+    padding-top: 10px; 
+}
+
+.nav-item {
+    margin-right: 15px;
+}
+
 /* Fading animation */
 .fade {
   animation-name: fade;
@@ -90,7 +102,7 @@ body {
 .footer-content {
     display: flex;
     justify-content: center; 
-    align-items: flex-start;
+    align-items: flex-start; 
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -147,6 +159,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
 }
 
 .video-container video {

@@ -47,6 +47,14 @@ body {
     background-color: green;
 }
 
+.navbar-nav {
+    padding-top: 10px;
+}
+
+.nav-item {
+    margin-right: 15px;
+}
+
 /* Center Content */
 .center-container {
     text-align: center;
@@ -139,22 +147,19 @@ body {
 
 .fetched-workout .fetched-data {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    margin: 0 auto;
 }
 
 .fetched-workout .workout-day {
     background-color: #3498db;
-    margin: 20px;
+    margin: 10px; 
     padding: 10px;
     border: 2px solid #000;
     border-radius: 5px;
-    height: auto;
-    max-width: 300px;
-    width: 100%;
+    height: 200px; 
+    width: 300px;
     box-sizing: border-box;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left; 
@@ -174,7 +179,7 @@ body {
 .fetched-workout .workout-details ul {
     list-style-type: none;
     padding: 0;
-    margin: 0; 
+    margin: 10; 
 }
 
 .fetched-workout .workout-details li {

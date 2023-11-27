@@ -30,6 +30,8 @@ if(isset($_POST["submit"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/Payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -78,17 +80,36 @@ if(isset($_POST["submit"])){
         <button type="button" id="cancelButton">Cancel</button>
     </form>
 
-    <div class="footer">
-        <div class="footer-content">
-            <p>
-                <img src="img/Gym Hero.png" alt class="footer-logo-img">
-            </p>
-            <p>&copy; 2023 Gym Hero. All rights reserved.</p>
-            <p>Contact us: GymHero@gmail.com</p>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <p>
+                        <img src="img/Gym Hero.png" alt class="footer-logo-img">
+                    </p>
+                </div>
+                <br>
+
+                <div class="footer-column">
+                    <div class="footer-information">
+                        <p>&copy; 2023 Gym Hero. All rights reserved.</p>
+                        <p>Contact us: GymHero@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <div class="footer-information">
+                        <p>Instructor Contact: Larry@gmail.com</p>
+                        <p>Instructor Number: 012-9876543</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div><!-- End of footer -->
 
 </body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <script>
     cancelButton.addEventListener('click', function () {

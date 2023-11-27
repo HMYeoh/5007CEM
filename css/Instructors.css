@@ -48,6 +48,14 @@ body {
   background-color: green;
 }
 
+.navbar-nav {
+    padding-top: 10px; 
+}
+
+.nav-item {
+    margin-right: 15px;
+}
+
 .center-container {
     text-align: center;
     padding: 20px;
@@ -84,27 +92,28 @@ body {
 
 .image-container img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 5px;
+    max-height: 100%;
 }
 
 .image-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 20px;
     padding: 10px;
     border: 2px solid #000;
     border-radius: 5px;
-    height: 320px;
-    width: 500px;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .introduction {
     max-width: 600px; 
     margin-left: 20px; 
-    text-align: justify;
+    text-align: left;
     padding: 50px;
     word-spacing: 2px;
 }

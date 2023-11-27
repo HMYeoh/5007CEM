@@ -48,13 +48,12 @@ body {
   background-color: green;
 }
 
-form {
-    width: 70%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 2px solid #333;
-    background-color: #f7f7f7;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.navbar-nav {
+    padding-top: 10px; 
+}
+
+.nav-item {
+    margin-right: 15px;
 }
 
 form h1 {
@@ -95,18 +94,32 @@ form p {
     margin-right: 10px; 
 }
 
+/* Fetched Data */
+.movements-section {
+    background-color: #3498db;
+    padding: 20px;
+}
+
 .movement-container {
-    margin-left: 20px; 
-    border: 1px solid #333; 
+    margin: 10px;
+    padding: 20px; 
+    border: 1px solid #333;
     background-color: #e0e0e0;
-    padding: 10px;
-    margin-right: 20px;
+    border-radius: 10px; 
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 20px;
     margin-bottom: 20px;
-    border-radius: 20px;
 }
 
 .movement-container h1 {
-    margin-left: 10px; 
+    margin-left: 20px;
+    font-size: 20px; 
+}
+
+.movement-container p {
+    margin-left: 20px; 
+    font-size: 16px; 
 }
 
 /* Footer */

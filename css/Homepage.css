@@ -23,11 +23,6 @@ body {
     color: black;
 }
 
-.topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-}
-
 .logout-container {
   float: right;
 }
@@ -46,6 +41,14 @@ body {
 
 .topnav .logout-container a:hover {
   background-color: green;
+}
+
+.navbar-nav {
+    padding-top: 10px; 
+}
+
+.nav-item {
+    margin-right: 15px;
 }
 
 /* Center Content */
@@ -121,6 +124,17 @@ body {
     font-size: 70px; 
 }
 
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; 
+    width: 100%;
+    padding: 20px; 
+}
+
 /* The dots/bullets/indicators */
 .dot {
   height: 12px;
@@ -133,9 +147,7 @@ body {
   cursor: pointer;
 }
 
-.active {
-  background-color: #717171;
-}
+
 
 /* Fading animation */
 .fade {

@@ -6,9 +6,12 @@ body {
 }
 
 .payment {
-    text-align: left;
+    max-width: 600px; /* Set a maximum width for the form */
+    margin: 0 auto; /* Center the form horizontally */
     padding: 20px;
-    margin-left: 180px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .payment h1 {
@@ -85,21 +88,31 @@ body {
 .footer {
     background-color: #333;
     color: white;
-    padding: 0px 0;
+    padding: 20px 0;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; 
+    align-items: flex-start; 
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    flex-wrap: wrap; 
 }
 
-.footer-content p {
+.footer-column {
+    flex: 1; 
+    margin-right: 20px; 
+}
+
+.footer-information {
+    margin-top: 100px; 
+}
+
+.footer-content .footer-information p {
     font-size: 18px;
-    text-align: center;
+    text-align: left;
 }
 
 .footer-content img {
@@ -112,9 +125,4 @@ body {
 .footer-logo-img {
     max-width: 200px;
     height: auto;
-}
-
-.footer-content .copyright,
-.footer-content .contact {
-    text-align: right;
 }

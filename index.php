@@ -61,9 +61,7 @@ if(isset($_POST["submit"])){
                 <br>
                 <p>If you have not register. <a href="Register.php">Register Now</a></p>
                 <button type="submit" name="submit" onclick="isvalid();" class="login-button">Login</button> 
-                <!-- <div class="button-container"> 
-                    <input type="submit" id="btn" value="Login" name="submit"/>
-                </div> -->
+               
                 
               </form>
           </div>

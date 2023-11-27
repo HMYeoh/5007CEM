@@ -9,6 +9,12 @@ else{
     header("Location: index.php");
 }
 
+if (isset($_POST['logout'])) {
+    // Destroy the session and redirect to the login page
+    session_destroy();
+    header("Location: index.php");
+    exit();
+}
 ?>
 
     <head>
@@ -16,27 +22,59 @@ else{
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/Movements.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
     <body>
-        <div class="topnav">
-            <a href="Homepage.php">Homepage</a>
-            <a href="Workout Schedule.php">Workout Schedule</a>
-            <a class="active" href="Movements.php">Movements</a>
-            <a href="Instructors.php">Instructor</a>
-            <a href="Videos.php">Routine</a>
-            <div class="logout-container">
-                <a href="logout.php">Logout</a>
-            </div><!-- End of logout-container -->
-        </div><!-- End of top-navigation -->
-        
-        <div class="center-container">
-            <h1>
-                <a href="Homepage.php" >
-                    <img src="img/Gym Hero.png" width="150" height="150" alt>
-                </a>&nbsp; Movements
-            </h1>
-            
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="Homepage.php">
+            Gym Hero
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="Homepage.php">Homepage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Workout Schedule.php">Workout Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Movements.php">Movements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Instructors.php">Instructor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Videos.php">Routine</a>
+                </li>
+                <br>
+                <li class="nav-item">
+                    <form method="post" class="d-flex">
+                        <button class="btn btn-danger" type="submit" name="logout">Logout</button>
+                    </form>
+                </li>
+            </ul>
         </div>
+    </nav>
+        
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h1 class="mt-5">
+                    <a href="Homepage.php" >
+                        <img src="img/Gym Hero.png" width="220" height="220" alt="Gym Hero Logo">
+                    </a>&nbsp; Movements
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="movements-section">
 
         <?php
         $servername = "localhost";
@@ -56,7 +94,7 @@ else{
         if(mysqli_num_rows($result) > 0)
         {
         while($row = mysqli_fetch_assoc($result)){
-            echo '<div class="movement-container"><h1>' . $row["name"] . '</h1><br>' . $row["description"] . '<br><br></div>';
+            echo '<div class="movement-container"><h1>' . $row["name"] . '</h1><br><p>' . $row["description"] . '</p></div>';
         }
         }
         else
@@ -70,6 +108,8 @@ else{
         ?>
         <br>
         <br>
+    </div>
+
         <div class="footer">
             <div class="footer-content">
                 <div class="footer-column">
@@ -96,4 +136,8 @@ else{
         </div>
 
     </body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
